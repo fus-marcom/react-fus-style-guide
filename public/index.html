@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <title>Style Guide | Franciscan University of Steubenville</title>
+  <meta name="description" content="The official style guide for Franciscan University of Steubenville.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tag above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#home" class="page-title">Style Guide</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="icon-navicon"></i></a>
+          </div>
+        </div>
+      </nav>
+
+    <ul class="side-nav fixed table-of-contents" id="mobile-demo">
+      <li class="logo">
+        <a id="logo-container" href="home" class="slow-nav brand-logo">
+          <img src="img/side-nav-logo.jpg">
+        </a>
+      </li>
+      <li><a href="#introduction">First Sidebar Link</a></li>
+      <li><a href="#structure">Second Sidebar Link</a></li>
+      <li><a href="#initialization">Section Three</a></li>
+
+    </ul>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+        <div class="col s12 m9 l10">
+          <div id="variables" class="section scrollspy">
+          <h2 class="header">Colors</h2>
+          <p class="flow-text">
+          The primary colors, Green and Gold, should be the main colors used for headers and footers. The other colors in the can be used as accent colors for floating action buttons, call to action buttons, call to action banners, or content that you want to emphasize. Keep in mind that overuse of accent colors will diminish their ability to draw attention to a specific area of the page.
+          </p>
+
+          <h5>SCSS Color Variables</h5>
+          <pre class=" language-scss"><code class=" language-scss">
+            $fus-yellow:     #ffc658;
+            $fus-light-blue: #8e9fbc;
+            $fus-dark-blue:  #1f2a44;
+            $fus-green:      #21412a;
+            $fus-gold:       #998643;
+          </code></pre>
+        </div>
+          <div id="variables" class="section scrollspy">
+          <h2 class="header">Variables</h2>
+          <p class="caption">
+          When using Sass, you can change the color scheme of your site extremely quickly. Below is a very small sample of what you can change through sass in <code class=" language-scss">_variables.scss</code>.
+          </p>
+          <pre class=" language-scss"><code class=" language-scss">
+  .table-of-contents {
+    a.active {
+      border-left: 2px solid $fus-yellow;
+    }
+    a:hover {
+      border-left: 1px solid $fus-yellow;
+    }
+  }
+          </code></pre>
+        </div>
+
+          <div id="structure" class="section scrollspy">
+            <p>Content </p>
+          </div>
+
+          <div id="initialization" class="section scrollspy">
+            <p>Content </p>
+          </div>
+        </div>
+      </div>
+      </div>
+  </main>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+  <footer class="page-footer">
+   <div class="footer-copyright">
+     <div class="container">
+     © <span id="copyright-date">2016</span> Franciscan University of Steubenville
+     </div>
+   </div>
+  </footer>
+  <!-- build:css /css/style.min.css -->
+  <link href="css/materialize.css" rel="stylesheet">
+  <link href="css/prism.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!-- endbuild -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="js/prism.js"></script>
+  <!-- build:js /js/app.min.js -->
+  <script type="text/javascript" src="js/app.js"></script>
+  <!-- endbuild -->
+  <!-- inject:analytics -->
+  <!-- endinject -->
+</html>
