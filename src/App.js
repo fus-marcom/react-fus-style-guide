@@ -14,11 +14,14 @@ class App extends Component {
 
         <h5>SCSS Color Variables</h5>
         <pre className=" language-scss"><code className=" language-scss">
+        {`
           $fus-yellow:     #ffc658;
           $fus-light-blue: #8e9fbc;
           $fus-dark-blue:  #1f2a44;
           $fus-green:      #21412a;
           $fus-gold:       #998643;
+          `}
+
         </code></pre>
       </div>
         <div id="variables" className="section scrollspy">
@@ -27,14 +30,14 @@ class App extends Component {
         When using Sass, you can change the color scheme of your site extremely quickly. Below is a very small sample of what you can change through sass in <code className=" language-scss">_variables.scss</code>.
         </p>
         <pre className=" language-scss"><code className=" language-scss">
-.table-of-contents {
-  a.active {
-    border-left: 2px solid $fus-yellow;
-  }
-  a:hover {
-    border-left: 1px solid $fus-yellow;
-  }
-}
+{ ` .table-of-contents {
+    a.active {
+      border-left: 2px solid $fus-yellow;
+    }
+    a:hover {
+      border-left: 1px solid $fus-yellow;
+    }
+  } `}
         </code></pre>
       </div>
 
