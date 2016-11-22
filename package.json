@@ -56,8 +56,8 @@
   "scripts": {
     "start": "npm run watch-css & node scripts/start.js",
     "build": "npm run build-css && node scripts/build.js",
-    "build-css": "node-sass public/sass/style.scss public/css/style.css",
-    "watch-css": "node-sass public/sass/style.scss public/css/style.css -w",
+    "build-css": "node-sass src/App.scss src/App.css",
+    "watch-css": "node-sass src/App.scss src/App.css -w",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
