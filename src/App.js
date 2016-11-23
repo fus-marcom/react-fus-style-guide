@@ -117,27 +117,38 @@ class App extends Component {
     //   })
     //   .then(console.log(this.state.sections));
 
-    function get(url){
-      return fetch(url, {
-        method: 'get'
-      }).then(response => {
-        return response;
-      });
-    }
+  //   function get(url){
+  //     return fetch(url, {
+  //       method: 'get'
+  //     }).then(response => {
+  //       return response;
+  //     });
+  //   }
+  //
+  //
+  //
+  //   function getJSON(url) {
+  //   return get(url).then(function(response) {
+  //     return response.json();
+  //   });
+  //   }
+  //
+  //   getJSON(`https://franciscan.university/HfjGnJUHz77wyWm5S8/wp-json/wp/v2/posts?`)
+  //   .then(function(data) {
+  //     this.setState({sections:data});
+  //   });
 
+  let myInit = {
+    method: "GET"
+  };
 
-
-    function getJSON(url) {
-    return get(url).then(function(response) {
-      return response.json();
-    });
-    }
-
-    getJSON(`https://franciscan.university/HfjGnJUHz77wyWm5S8/wp-json/wp/v2/posts?`)
-    .then(function(data) {
-      this.setState({sections:data});
-    });
-  }
+  fetch("https://franciscan.university/HfjGnJUHz77wyWm5S8/wp-json/wp/v2/posts?", myInit).then((response) => {
+    return response.json();
+  }).then((data) => {
+    this.state.sections = data;
+    this.setState(this.state);
+  });
+}
 
 
   render() {
