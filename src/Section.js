@@ -4,7 +4,7 @@ import Code from './Code';
 class Section extends Component {
 
   renderCode() {
-    if (this.props.code != ``) {
+    if (this.props.code !== ``) {
       return (
         <Code code={this.props.code} />
       )
@@ -13,13 +13,10 @@ class Section extends Component {
 
   render() {
     return (
-        <div id={this.props.header.toLowerCase()} className="section scrollspy">
-        <h2 className="header">{this.props.header}</h2>
-        <div dangerouslySetInnerHTML={{__html: this.props.content }} />
-
-          {this.renderCode()}
-
-
+      <div id={this.props.header.toLowerCase()} className="section scrollspy">
+      <h2 className="header">{this.props.header}</h2>
+      <div dangerouslySetInnerHTML={{__html: this.props.content }} />
+        {this.renderCode()}
       </div>
     );
   }
