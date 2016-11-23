@@ -46,24 +46,21 @@ class App extends Component {
 		this.state = {sections: [
       {
         title: {
-          rendered: "Colors"
+          rendered: "Intro"
         },
         content:  {
 
           rendered:
           `
           <p class="flow-text">
-            The primary colors, Green and Gold, should be the main colors used for headers and footers. The other colors in the can be used as accent colors for floating action buttons, call to action buttons, call to action banners, or content that you want to emphasize. Keep in mind that overuse of accent colors will diminish their ability to draw attention to a specific area of the page.
+            The Franciscan University of Steubenville Style Guide is a resource for web design and development. The framework and code samples allow developers to quickly construct a site that will maintain branding standards and fit in well with current University websites.
+          </p>
+          <p class="flow-text">
+            This is a living style guide. It will be continually updated to fix bugs and keep our online brand in line with current design standards.
           </p>
            `
          },
-        code: `
-          $fus-yellow:     #ffc658;
-          $fus-light-blue: #8e9fbc;
-          $fus-dark-blue:  #1f2a44;
-          $fus-green:      #21412a;
-          $fus-gold:       #998643;
-          `
+        code: ``
       },
       {
         title: {
@@ -110,45 +107,22 @@ class App extends Component {
     ]};
 	}
 
-  componentDidMount() {
-    // fetch(`https://franciscan.university/HfjGnJUHz77wyWm5S8/wp-json/wp/v2/posts?`)
-    //   .then(result=> {
-    //       this.setState({sections:result.json()});
-    //   })
-    //   .then(console.log(this.state.sections));
-
-  //   function get(url){
-  //     return fetch(url, {
-  //       method: 'get'
-  //     }).then(response => {
-  //       return response;
-  //     });
-  //   }
+// This get data from an api
+  // componentDidMount() {
   //
+  //   let myInit = {
+  //     method: "GET"
+  //   };
+  // Url of the api endpoint
+  // let url = "";
   //
-  //
-  //   function getJSON(url) {
-  //   return get(url).then(function(response) {
+  //   fetch(url, myInit).then((response) => {
   //     return response.json();
+  //   }).then((data) => {
+  //     this.state.sections = data;
+  //     this.setState(this.state);
   //   });
-  //   }
-  //
-  //   getJSON(`https://franciscan.university/HfjGnJUHz77wyWm5S8/wp-json/wp/v2/posts?`)
-  //   .then(function(data) {
-  //     this.setState({sections:data});
-  //   });
-
-  let myInit = {
-    method: "GET"
-  };
-
-  fetch("https://franciscan.university/HfjGnJUHz77wyWm5S8/wp-json/wp/v2/posts?", myInit).then((response) => {
-    return response.json();
-  }).then((data) => {
-    this.state.sections = data;
-    this.setState(this.state);
-  });
-}
+  // }
 
 
   render() {
