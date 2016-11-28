@@ -80,15 +80,21 @@ class App extends Component {
           <p class="flow-text">
             The CSS and JavaScript files needed to build a University site are available by adding these two lines of code to your HTML.
           </p>
-          <pre className="language-css">
-            <code className="language-css">
-            <!-- Compiled and minified CSS -->
-              &lt;link rel="stylesheet" href="https://franciscan.university/cdn/css/fus-materialize.min.css">
+          <pre class="language-html">
+            <code class="language-html">
+  &lt;!-- Compiled and minified CSS -->
+  &lt;link rel="stylesheet" href="https://franciscan.university/cdn/css/fus-materialize.min.css">
 
-              <!-- Compiled and minified JavaScript -->
-              &lt;script src="https://franciscan.university/cdn/js/fus-materialize.min.js"></script>
+  &lt;!-- Compiled and minified JavaScript -->
+  &lt;script src="https://franciscan.university/cdn/js/fus-materialize.min.js">&lt;/script>
             </code>
           </pre>
+          <p class="promo-caption">Downloads</p>
+          <p class="flow-text">
+            You can also download the source files along with a starter theme.
+            <a id="download-source" class="btn waves-effect waves-light" style="font-size: 16px;
+  font-weight: 400;" href="">FUS-Materialize<i class="material-icons right">file_download</i></a>
+          </p>
            `
          },
         code: `
@@ -108,8 +114,21 @@ class App extends Component {
           rendered:
           `
           <p class="flow-text">
-            The primary colors, Green and Gold, should be the main colors used for headers and footers. The other colors in the can be used as accent colors for floating action buttons, call to action buttons, call to action banners, or content that you want to emphasize. Keep in mind that overuse of accent colors will diminish their ability to draw attention to a specific area of the page.
+            The primary colors, Green and Gold, should be the main colors used for headers and footers. The remaining colors can be used as accent colors for floating action buttons, call to action buttons, call to action banners, or content that you want to emphasize. Keep in mind that overuse of accent colors will diminish their ability to draw attention to a specific area of the page.
           </p>
+          <p class="flow-text">
+            It is acceptable make these colors slightly transparent in some situations, such as in a fixed (sticky) header.
+          </p>
+
+          <div>
+            <div style="background-color:#21412a;">Green</div>
+            <div style="background-color:#998643;">Gold</div>
+            <div style="background-color:#21412a;">Green</div>
+            <div style="background-color:#21412a;">Green</div>
+            <div style="background-color:#21412a;">Green</div>
+          </div>
+
+          <p class="promo-caption">SCSS Color Variables</p>
            `
          },
         code: `
