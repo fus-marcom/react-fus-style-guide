@@ -65,6 +65,10 @@ nav {
   margin-top: 5px;
   margin-bottom: 0; }
 
+.color-div {
+  padding: 16px;
+  color: #fff; }
+
 code, pre {
   position: relative;
   font-size: 1.1rem; }

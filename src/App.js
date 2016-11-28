@@ -74,7 +74,7 @@ class App extends Component {
             Our online branding follows <a href="https://material.google.com/#" title="Materal Design">Material Design principles</a>. Please refer to these principles when developing University sites.
           </p>
           <p class="flow-text">
-            We utilize the <a href="http://materializecss.com/" title="Materialize">Materialze</a> framework with some customizations for our new website. Any of the components available in Materialize can be used in University sites.
+            We utilize the <a href="http://materializecss.com/" title="Materialize">Materialze</a> framework with some customizations for our new websites. Any of the components available in Materialize can be used in University sites.
           </p>
           <p class="promo-caption">CDN</p>
           <p class="flow-text">
@@ -121,11 +121,11 @@ class App extends Component {
           </p>
 
           <div>
-            <div style="background-color:#21412a;">Green</div>
-            <div style="background-color:#998643;">Gold</div>
-            <div style="background-color:#21412a;">Green</div>
-            <div style="background-color:#21412a;">Green</div>
-            <div style="background-color:#21412a;">Green</div>
+            <div class="color-div" style="background-color:#21412a;">Green #21412a</div>
+            <div class="color-div" style="background-color:#998643;">Gold #998643</div>
+            <div class="color-div" style="background-color:#1f2a44;">Dark Blue #1f2a44</div>
+            <div class="color-div" style="background-color:#8e9fbc;">Light Blue #8e9fbc</div>
+            <div class="color-div" style="background-color:#ffc658;">Yellow #ffc658</div>
           </div>
 
           <p class="promo-caption">SCSS Color Variables</p>
@@ -138,6 +138,21 @@ class App extends Component {
           $fus-green:      #21412a;
           $fus-gold:       #998643;
           `
+      },
+      {
+        title: {
+          rendered: "Typography"
+        },
+        content:  {
+
+          rendered:
+          `
+          <p class="flow-text">
+            Roboto is the font of choice for Univerity sites. It offers good readability on a variety of devices. Default font weight, size, and color are already included in the FUS-Materialize theme. More options and a deeper explaination are available in the <a href="https://material.google.com/style/typography.html#typography-styles" title="Material Design Typography">Material Design Typography Guidelines</a> and <a href="http://materializecss.com/typography.html">Materialize Typography</a>.
+          </p>
+           `
+         },
+        code: ``
       },
     ]};
 	}
