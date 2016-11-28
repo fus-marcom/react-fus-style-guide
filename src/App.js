@@ -148,8 +148,37 @@ class App extends Component {
           rendered:
           `
           <p class="flow-text">
-            Roboto is the font of choice for Univerity sites. It offers good readability on a variety of devices. Default font weight, size, and color are already included in the FUS-Materialize theme. More options and a deeper explaination are available in the <a href="https://material.google.com/style/typography.html#typography-styles" title="Material Design Typography">Material Design Typography Guidelines</a> and <a href="http://materializecss.com/typography.html">Materialize Typography</a>.
+            Roboto is the font of choice for the Univerity's sites. It offers good readability on a variety of devices. Default font weight, size, and color are already included in the FUS-Materialize theme. More options and a deeper explaination are available in the <a href="https://material.google.com/style/typography.html#typography-styles" title="Material Design Typography">Material Design Typography Guidelines</a> and <a href="http://materializecss.com/typography.html">Materialize Typography</a>.
           </p>
+           `
+         },
+        code: ``
+      },
+      {
+        title: {
+          rendered: "Icons"
+        },
+        content:  {
+
+          rendered:
+          `
+          <p class="flow-text">
+            Material Design has its own set of font icons (<a href="https://material.io/icons/" title="Material Design Icons">Material Design Icons</a> ). To use the official Material Design fonts add the following tag in the head of your site (already included in the sample template).
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+  &lt;link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            </code>
+          </pre>
+          <p class="flow-text">
+            To add an icon to your site use the following tag and replace "chat_bubble" with the name of the icon you want to display.
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+  &lt;i class="material-icons">chat_bubble&lt;/i>
+
+            </code>
+          </pre>
            `
          },
         code: ``
