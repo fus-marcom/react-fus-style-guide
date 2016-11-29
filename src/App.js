@@ -179,6 +179,20 @@ class App extends Component {
 
             </code>
           </pre>
+          <p class="promo-caption">Social Icons</p>
+          <p class="flow-text">
+            Social media icons are added with the following tags.
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+  &lt;i class="material-icons">add code for all social media icons here with comments labeling each&lt;/i>
+
+            </code>
+          </pre>
+          <p class="promo-caption">Icon Size</p>
+          <p class="flow-text">
+            Icons should be at least 24px. The clickable area should be a minimum of 48px including the size of the icon.
+          </p>
            `
          },
         code: ``
