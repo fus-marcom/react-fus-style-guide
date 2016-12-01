@@ -197,6 +197,47 @@ class App extends Component {
          },
         code: ``
       },
+      {
+        title: {
+          rendered: "Logos"
+        },
+        content:  {
+
+          rendered:
+          `
+          <p class="flow-text">
+            To protect our brand integrity, the Franciscan University Logo cannot be altered in any way without approval from Marketing and Communications. Unless otherwise stated the <a href="https://myfranciscan.franciscan.edu/ICS/clientconfig/customcontent/marcom/MarComTab/LogoManual2.pdf" title="Brand Manual PDF" >guidelines for using logos in print material</a>  also apply to websites and apps.
+          </p>
+
+          <p class="flow-text">
+            Primary locations for logos are in the upper left corner of the header, top of the side-nav, or in the footer.
+          </p>
+
+          <p class="flow-text">
+            [Add examples of using logos on different color backgrounds and at different sizes. Mention the minimum size for readability.]
+          </p>
+          <p class="flow-text">
+            The most commonly used logos are included in the sample theme.
+          </p>
+           `
+         },
+        code: ``
+      },
+      {
+        title: {
+          rendered: "Header"
+        },
+        content:  {
+
+          rendered:
+          `
+          <p class="flow-text">
+            Roboto is the font of choice for the Univerity's sites. It offers good readability on a variety of devices. Default font weight, size, and color are already included in the FUS-Materialize theme. More options and a deeper explaination are available in the <a href="https://material.google.com/style/typography.html#typography-styles" title="Material Design Typography">Material Design Typography Guidelines</a> and <a href="http://materializecss.com/typography.html">Materialize Typography</a>.
+          </p>
+           `
+         },
+        code: ``
+      },
     ]};
 	}
 
