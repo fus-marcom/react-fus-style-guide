@@ -241,7 +241,7 @@ class App extends Component {
           </p>
           <p class="promo-caption">Header Position without Side-Nav</p>
           <p class="flow-text">
-            If a fixed side-nav is not in use, the header should be "sticky". The header should disappear when scrolling down and reappear when scrolling up. (<a href="https://franciscan.university/ma-theology/" title="Sticky Disappearing Header" target="_blank">Example</a>) This provides a better user experience on small screens. Include the headroom.js code (included in the theme) in your project, either linked directly or bundled in your minified javascript and use the following code. [Include code to use headroom js for the sticky nav, grab the code from ma-theology site]
+            If a fixed side-nav is not in use, the header should be "sticky". The header should disappear when scrolling down and reappear when scrolling up. (<a href="https://franciscan.university/ma-theology/" title="Sticky Disappearing Header" target="_blank">Example</a>) This provides a better user experience on small screens. Include the headroom.js code (included in the theme) in your project, either linked directly or bundled in your minified javascript and use the following code.
           </p>
           <pre class="language-html">
             <code class="language-html">
@@ -310,6 +310,81 @@ class App extends Component {
             <code class="language-html">
   &lt;i class="material-icons">add code for headers&lt;/i>
 
+            </code>
+          </pre>
+           `
+         },
+        code: ``
+      },
+      {
+        title: {
+          rendered: "Footer"
+        },
+        content:  {
+
+          rendered:
+          `
+          <p class="promo-caption">Footer Size</p>
+          <p class="flow-text">
+            There is no maximum footer height, but it shouldn't take up more than 80% of the vertical height of the average desktop screen. Minimum footer height is 50px. This allows for one line of text with a 15px font size and adequate padding.
+          </p>
+          <p class="promo-caption">Footer Color</p>
+          <p class="flow-text">
+            The prefered footer color is fus-green. It can be accompanied by a maximum 5px tall fus-gold border on the top. The lower section of the footer is always a slightly darker shade of the main footer color. If the main footer color is fus-green then the lower part will be <code>#1e3a26</code>. (<a href="https://franciscansquare.com/" title="Full Footer" target="_blank">Example</a>: scroll to bottom)
+          </p>
+          <p class="promo-caption">Tall Footer</p>
+          <pre class="language-html">
+            <code class="language-html">
+&lt;footer class="page-footer">
+  &lt;div class="container">
+    &lt;div class="row">
+      &lt;div class="col s12 m6 center">
+        &lt;a href="http://www.franciscan.edu/" title="Franciscan University of Steubenville" target="_blank">&lt;img class="responsive-img" src="img/franciscan-logo.png" />&lt;/a>
+      &lt;/div>
+      &lt;div class="col s12 m6">
+        &lt;h5 class="white-text light">Franciscan Square&lt;/h5>
+        &lt;address>
+          &lt;p class="white-text" translate="no" typeof="schema:PostalAddress">
+            &lt;span property="schema:name">Franciscan Square&lt;/span>&lt;br>
+            &lt;span property="schema:streetAddress">200 Franciscan Square&lt;/span>&lt;br>
+            &lt;span property="schema:addressLocality">Steubenville&lt;/span>, &lt;abbr title="Ohio" property="schema:addressRegion">OH&lt;/abbr> &lt;span property="schema:postalCode">43952&lt;/span> &lt;abbr property="schema:addressCountry">USA&lt;/abbr>&lt;br />
+            &lt;a href="tel:+17402820901" property="telephone" class="white-text">740.282.0901&lt;/a>&lt;br />
+          &lt;/p>
+        &lt;/address>
+        &lt;div class="social">
+          &lt;a href="https://www.facebook.com/franciscansquare/" target="_blank">
+            &lt;i class="icon-facebook white-text">&lt;/i>
+          &lt;/a>
+          &lt;a href="https://twitter.com/franciscansqr" target="_blank">
+            &lt;i class="icon-twitter white-text">&lt;/i>
+          &lt;/a>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+ &lt;div class="footer-copyright">
+   &lt;div class="container">
+   &#169; &lt;span id="copyright-date">2016&lt;/span> Franciscan University of Steubenville
+   &lt;/div>
+ &lt;/div>
+&lt;/footer>
+            </code>
+          </pre>
+
+          <p class="promo-caption">Slim Footer</p>
+          <p class="flow-text">
+            Some sites, particularly internal sites, may not need a tall footer. The slim footer contains only the copyright portion of the footer. The standard color is the same as in the tall footer <code>#1e3a26</code>. Scroll to the bottom of this page to see an example.
+          </p>
+
+          <pre class="language-html">
+            <code class="language-html">
+&lt;footer class="page-footer">
+ &lt;div class="footer-copyright">
+   &lt;div class="container">
+   © &lt;span id="copyright-date">2016&lt;/span> Franciscan University of Steubenville
+   &lt;/div>
+ &lt;/div>
+&lt;/footer>
             </code>
           </pre>
            `
