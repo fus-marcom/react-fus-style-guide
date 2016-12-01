@@ -71,7 +71,7 @@ class App extends Component {
           rendered:
           `
           <p class="flow-text">
-            Our online branding follows <a href="https://material.google.com/#" title="Materal Design">Material Design principles</a>. Please refer to these principles when developing University sites.
+            Our online branding follows <a href="https://material.google.com/#" title="Material Design">Material Design principles</a>. Please refer to these principles when developing University sites.
           </p>
           <p class="flow-text">
             We utilize the <a href="http://materializecss.com/" title="Materialize">Materialze</a> framework with some customizations for our new websites. Any of the components available in Materialize can be used in University sites.
@@ -231,9 +231,87 @@ class App extends Component {
 
           rendered:
           `
+          <p class="promo-caption">Header Size</p>
           <p class="flow-text">
-            Roboto is the font of choice for the Univerity's sites. It offers good readability on a variety of devices. Default font weight, size, and color are already included in the FUS-Materialize theme. More options and a deeper explaination are available in the <a href="https://material.google.com/style/typography.html#typography-styles" title="Material Design Typography">Material Design Typography Guidelines</a> and <a href="http://materializecss.com/typography.html">Materialize Typography</a>.
+            Headers should be as thin as possible to avoid taking up too much screen space, especially on small screens. If a side-nav is in use (with a logo at the top) the header could be as short as 64px tall. In general, the header should by just tall enough for the logo text to be readable with at least 8px of padding at the top and bottom of the logo.
           </p>
+          <p class="promo-caption">Header Color</p>
+          <p class="flow-text">
+            The prefered header color is fus-green. It can be accompanied by a maximum 5px tall fus-gold border on the bottom. If a full screen video hero section is in use, the header can be transparent or have semi-transparent black background, <code>rgba(0, 0, 0, 0.37)</code>, for readablility. The green header background can also be slightly transparent, <code>rgba(33,65,42,.68)</code>.
+          </p>
+          <p class="promo-caption">Header Position without Side-Nav</p>
+          <p class="flow-text">
+            If a fixed side-nav is not in use, the header should be "sticky". The header should disappear when scrolling down and reappear when scrolling up. (<a href="https://franciscan.university/ma-theology/" title="Sticky Disappearing Header" target="_blank">Example</a>) This provides a better user experience on small screens. Include the headroom.js code (included in the theme) in your project, either linked directly or bundled in your minified javascript and use the following code. [Include code to use headroom js for the sticky nav, grab the code from ma-theology site]
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+&lt;div class="navbar-fixed">
+  &lt;nav>
+    &lt;div class="nav-wrapper">
+      &lt;a href="#home" class="brand-logo">&lt;img src="img/logoTxt.png"/>&lt;/a>
+      &lt;a href="#" data-activates="mobile-demo" class="button-collapse">&lt;i class="icon-navicon">&lt;/i>&lt;/a>
+      &lt;ul class="right hide-on-med-and-down">
+        &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">Blog&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">Contact&lt;/a>&lt;/li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/nav>
+&lt;/div>
+            </code>
+          </pre>
+          <pre class="language-javascript">
+            <code class="language-javascript">
+  //Headroom.js init
+  // grab an element
+  var myElement = document.querySelector('nav');
+  // construct an instance of Headroom, passing the element
+  var headroom  = new Headroom(myElement);
+  // init
+  headroom.init();
+
+            </code>
+          </pre>
+          <p class="promo-caption">Header Position with Side-Nav</p>
+          <p class="flow-text">
+            If a fixed side-nav is in use, a "sticky" header is not necessary, because the navigation remains visible in the side-nav as the user scrolls. If the header is not sticky, a scroll-to-top button [link to scroll to top button code] should be included.
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+&lt;header>
+  &lt;nav>
+    &lt;div class="container">
+      &lt;div class="nav-wrapper">
+        &lt;a href="#home" class="page-title">Style Guide&lt;/a>
+        &lt;a href="#" data-activates="mobile-demo" class="button-collapse">&lt;i class="icon-navicon">&lt;/i>&lt;/a>
+      &lt;/div>
+    &lt;/div>
+  &lt;/nav>
+
+  &lt;ul class="side-nav fixed table-of-contents" id="mobile-demo">
+    &lt;li class="logo">
+      &lt;a id="logo-container" href="home" class="brand-logo">
+        &lt;img src="img/side-nav-logo.jpg">
+      &lt;/a>
+    &lt;/li>
+    &lt;li>&lt;a href="#introduction">First Sidebar Link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#structure">Second Sidebar Link&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#initialization">Section Three&lt;/a>&lt;/li>
+
+  &lt;/ul>
+&lt;/header>
+            </code>
+          </pre>
+          <p class="promo-caption">Shrinking Header</p>
+          <p class="flow-text">
+            On large screens, a "sticky" header can be taller at first, and shrink on scroll. (<a href="https://material.google.com/#" title="Shrinking Header" target="_blank">Example</a>)
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+  &lt;i class="material-icons">add code for headers&lt;/i>
+
+            </code>
+          </pre>
            `
          },
         code: ``
