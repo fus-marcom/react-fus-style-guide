@@ -507,6 +507,44 @@ class App extends Component {
 &lt;/div>
             </code>
           </pre>
+          <pre class="language-scss">
+            <code class="language-scss">
+  .hero-section {
+    background-image: url("../img/hotel-exterior.jpg"); //Add image path here
+    background-size: cover;
+    background-attachment: fixed;
+    height:calc(90vh - 64px); //Adjust image height here. Use 100vh to cover screen.
+  }
+            </code>
+          </pre>
+          <p class="promo-caption">Hero Video</p>
+          <p class="flow-text">
+            Using a video for the background of the hero section can be eye catching if done right, or can induce motion sickness and annoyance if poorly implemented. When using a hero video, a backup image should also be used in case the video takes a long time to load, or the user is on a mobile device. In the case of a mobile device, the video should be completely replaced with an image out of respect for the data plans of our users and to decrease load times on cellular networks.
+          </p>
+          <p class="flow-text">
+            Ideally the video should be less than 60 seconds and make sense without sound. Users should be given the option to stop the video. Depending on the screen size and dimensions, certain parts of the video may not be visible. Any important action in the video should take place in the center to insure visibility.
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+&lt;div class="hero-section">
+  &lt;div class="hero-overlay">&lt;/div>
+  &lt;div class="hero-banner">
+    &lt;h1 class="center light">Franciscan Square&lt;/h1>
+    &lt;h4 class="center light">A bright tomorrow starts with a great today.&lt;/h4>
+  &lt;/div>
+&lt;/div>
+            </code>
+          </pre>
+          <pre class="language-scss">
+            <code class="language-scss">
+  .hero-section {
+    background-image: url("../img/hotel-exterior.jpg"); //Add image path here
+    background-size: cover;
+    background-attachment: fixed;
+    height:calc(90vh - 64px); //Adjust image height here. Use 100vh to cover screen.
+  }
+            </code>
+          </pre>
           <p class="promo-caption">SideNav Visible on Large Screens</p>
           <p class="flow-text">
             To use a sidebar like the one featured on this site, add the html markup included below. The rest of you content will need to be offset by the width of your sidebar to make room for it. The sidebar used on this site is 240px. The CSS included below will offset the content on large screens, and remove the offset on smaller screens. Make sure your sidebar is narrow enough for use on mobile devices.
