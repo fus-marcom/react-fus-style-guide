@@ -481,6 +481,98 @@ class App extends Component {
          },
         code: ``
       },
+      {
+        title: {
+          rendered: "Hero Section"
+        },
+        content:  {
+
+          rendered:
+          `
+          <p class="flow-text">
+            The Hero Section is a design element that can grab a user's attention as soon as the page loads. The Hero Section can feature a large high quality image or video. It usually features some text and a call to action. Do not add too many options in the Hero Section. One call to action in the Hero Section is ideal, but two can be used if necessary. The Hero Section is not well suited for strictly informational sites like this one, or the University Bulletin site, but is best utilized in marketing sites such as those geared toward prospective students or donors.
+          </p>
+          <p class="promo-caption">Hero Image</p>
+          <p class="flow-text">
+            The hero image will be the largest and most prominent image on your site. It should be high quality. A variety of sizes of the image should be make to fit different screen sizes. An image may look great in a landscape orientation, but not in portrait. In this case use a different image or a different cropping of the same image for portrait orientation.
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+&lt;div class="hero-section">
+  &lt;div class="hero-overlay">&lt;/div>
+  &lt;div class="hero-banner">
+    &lt;h1 class="center light">Franciscan Square&lt;/h1>
+    &lt;h4 class="center light">A bright tomorrow starts with a great today.&lt;/h4>
+  &lt;/div>
+&lt;/div>
+            </code>
+          </pre>
+          <p class="promo-caption">SideNav Visible on Large Screens</p>
+          <p class="flow-text">
+            To use a sidebar like the one featured on this site, add the html markup included below. The rest of you content will need to be offset by the width of your sidebar to make room for it. The sidebar used on this site is 240px. The CSS included below will offset the content on large screens, and remove the offset on smaller screens. Make sure your sidebar is narrow enough for use on mobile devices.
+          </p>
+
+          <pre class="language-html">
+            <code class="language-html">
+&lt;header>
+  &lt;nav>
+    &lt;div class="container">
+      &lt;div class="nav-wrapper">
+        &lt;a href="#home" class="page-title">Style Guide&lt;/a>
+        &lt;a href="#" data-activates="mobile-demo" class="button-collapse">&lt;i class="icon-navicon">&lt;/i>&lt;/a>
+      &lt;/div>
+    &lt;/div>
+  &lt;/nav>
+
+&lt;ul class="side-nav fixed table-of-contents" id="mobile-demo">
+  &lt;li class="logo">
+    &lt;a id="logo-container" href="home" class="brand-logo">
+      &lt;img src="img/side-nav-logo.jpg">
+    &lt;/a>
+  &lt;/li>
+  &lt;li>&lt;a href="#introduction">First Sidebar Link&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#structure">Second Sidebar Link&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#initialization">Section Three&lt;/a>&lt;/li>
+
+&lt;/ul>
+&lt;/header>
+            </code>
+          </pre>
+          <pre class="language-css">
+            <code class="language-css">
+  header, main, footer {
+    padding-left: 240px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+            </code>
+          </pre>
+          <p class="promo-caption">Small Screen Only SideNav</p>
+          <p class="flow-text">
+            Use this SideNav when you only have a few menu items that can be displayed in the header on large screens, but wouldn't fit on smaller screens. The <a href="https://franciscansquare.com/" title="Franciscan Square" target="_blank">Franciscan Square</a> website is an example of this.
+          </p>
+          <pre class="language-html">
+            <code class="language-html">
+&lt;ul class="side-nav" id="mobile-demo">
+  &lt;li class="logo">
+    &lt;a id="logo-container" href="/">
+      &lt;img class="responsive-img"src="img/FrSqLogoH.jpg" title="Franciscan Square Logo">
+    &lt;/a>
+  &lt;/li>
+  &lt;li>&lt;a href="/hotel">Hotel&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="/about">About&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="/local">Local&lt;/a>&lt;/li>
+&lt;/ul>
+            </code>
+          </pre>
+           `
+         },
+        code: ``
+      },
     ]};
 	}
 
