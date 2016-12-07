@@ -524,87 +524,171 @@ class App extends Component {
           <p class="flow-text">
             Ideally the video should be less than 60 seconds and make sense without sound. Users should be given the option to stop the video. Depending on the screen size and dimensions, certain parts of the video may not be visible. Any important action in the video should take place in the center to insure visibility.
           </p>
+          <p class="flow-text">
+            Included below is the HTML and SCSS for the hero video section on the <a href="https://franciscan.university/ma-theology/" target="_blank" title="MA Theology">MA Theology microsite</a>.
+          </p>
           <pre class="language-html">
             <code class="language-html">
-&lt;div class="hero-section">
-  &lt;div class="hero-overlay">&lt;/div>
-  &lt;div class="hero-banner">
-    &lt;h1 class="center light">Franciscan Square&lt;/h1>
-    &lt;h4 class="center light">A bright tomorrow starts with a great today.&lt;/h4>
+&lt;div class="section valign-wrapper txt-shadow z-depth-1" id="home" name="#home">
+  &lt;div class="parallax">
+    &lt;video poster="img/hero-placeholder-min.jpg" loop id="bgvid" preload="none">
+      &lt;source src="video/ma-theology-720p.mp4" type="video/mp4">
+    &lt;/video>
+  &lt;/div>
+  &lt;div class="parallax vid-shade">
+    &lt;i class="material-icons" id="replay">play_arrow&lt;/i>
+    &lt;i class="material-icons" id="pause">pause&lt;/i>
+  &lt;/div>
+  &lt;div class="valign container">
+    &lt;div class="row">
+      &lt;h3 class="center header light">Evangelize the World&lt;/h3>
+      &lt;h5 class="center">Graduate Theology from the heart of the Church since 1980&lt;/h5>
+    &lt;/div>
+    &lt;div class="row">
+      &lt;p class="flow-text center">
+        Our internationally respected faculty joyfully live out their mission to educate the most competent and dedicated Catholic leaders and teachers. We offer graduate programs in theology, catechetics, and evangelization that are accessible, comprehensive, and ecclesial.
+      &lt;/p>
+    &lt;/div>
+    &lt;div class="row center">
+      &lt;a href="#quote-banner" class="btn-large waves-effect waves-light btn-inverse slow-nav">Why Franciscan?&lt;/a>
+    &lt;/div>
+    &lt;div class="row center">
+      &lt;a href="#pick-your-program" class="btn-large waves-effect waves-light btn-inverse slow-nav">Find Your Program&lt;/a>
+    &lt;/div>
   &lt;/div>
 &lt;/div>
             </code>
           </pre>
           <pre class="language-scss">
             <code class="language-scss">
-  .hero-section {
-    background-image: url("../img/hotel-exterior.jpg"); //Add image path here
-    background-size: cover;
-    background-attachment: fixed;
-    height:calc(90vh - 64px); //Adjust image height here. Use 100vh to cover screen.
+#home {
+ min-height: 100vh;
+ padding-top: 0;
+ background-color: rgba(0, 0, 0, 0.4);
+ padding: 0px;
+
+.btn-large {
+  font-size: 20px;
+  text-shadow: none;
+  min-width: 270px;
+}
+
+@media screen and (max-height: 578px) {
+  padding-top: 76px;
+
+  .container p.flow-text {
+    display: none;
   }
-            </code>
-          </pre>
-          <p class="promo-caption">SideNav Visible on Large Screens</p>
-          <p class="flow-text">
-            To use a sidebar like the one featured on this site, add the html markup included below. The rest of you content will need to be offset by the width of your sidebar to make room for it. The sidebar used on this site is 240px. The CSS included below will offset the content on large screens, and remove the offset on smaller screens. Make sure your sidebar is narrow enough for use on mobile devices.
-          </p>
+}
 
-          <pre class="language-html">
-            <code class="language-html">
-&lt;header>
-  &lt;nav>
-    &lt;div class="container">
-      &lt;div class="nav-wrapper">
-        &lt;a href="#home" class="page-title">Style Guide&lt;/a>
-        &lt;a href="#" data-activates="mobile-demo" class="button-collapse">&lt;i class="icon-navicon">&lt;/i>&lt;/a>
-      &lt;/div>
-    &lt;/div>
-  &lt;/nav>
+.parallax {
+  z-index: 1;
+  overflow: hidden;
+  left: -250px;
+  min-height: 100vh;
+}
 
-&lt;ul class="side-nav fixed table-of-contents" id="mobile-demo">
-  &lt;li class="logo">
-    &lt;a id="logo-container" href="home" class="brand-logo">
-      &lt;img src="img/side-nav-logo.jpg">
-    &lt;/a>
-  &lt;/li>
-  &lt;li>&lt;a href="#introduction">First Sidebar Link&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="#structure">Second Sidebar Link&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="#initialization">Section Three&lt;/a>&lt;/li>
+.vid-shade {
+  background-color: rgba(0, 0, 0, 0.31);
+  left: 0;
+}
 
-&lt;/ul>
-&lt;/header>
-            </code>
-          </pre>
-          <pre class="language-css">
-            <code class="language-css">
-  header, main, footer {
-    padding-left: 240px;
+.valign.container {
+  z-index: 2;
+}
+
+.flow-text {
+  font-size: 120%;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 800px) {
+  background: none;
+}
+
+#replay, #pause {
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: block;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    cursor: pointer;
+    opacity: .5;
+    font-size: 48px;
   }
+}
 
-  @media only screen and (max-width : 992px) {
-    header, main, footer {
-      padding-left: 0;
-    }
+#replay.scroll, #pause.scroll {
+  @media screen and (min-width: 800px) {
+    position: absolute;
   }
-            </code>
-          </pre>
-          <p class="promo-caption">Small Screen Only SideNav</p>
-          <p class="flow-text">
-            Use this SideNav when you only have a few menu items that can be displayed in the header on large screens, but wouldn't fit on smaller screens. The <a href="https://franciscansquare.com/" title="Franciscan Square" target="_blank">Franciscan Square</a> website is an example of this.
-          </p>
-          <pre class="language-html">
-            <code class="language-html">
-&lt;ul class="side-nav" id="mobile-demo">
-  &lt;li class="logo">
-    &lt;a id="logo-container" href="/">
-      &lt;img class="responsive-img"src="img/FrSqLogoH.jpg" title="Franciscan Square Logo">
-    &lt;/a>
-  &lt;/li>
-  &lt;li>&lt;a href="/hotel">Hotel&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="/about">About&lt;/a>&lt;/li>
-  &lt;li>&lt;a href="/local">Local&lt;/a>&lt;/li>
-&lt;/ul>
+}
+}
+
+#home:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+}
+
+.short-screen {
+  display: none;
+
+  @media screen and (max-height: 578px) {
+    display: block;
+  }
+}
+
+#bgvid {
+  min-width: 100%;
+  min-height: 100%;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+#down-icon {
+  position: relative;
+  margin: (-90px) auto 0;
+  display: block;
+  width: 90px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+#quote-banner {
+  padding: 50px 0px;
+
+@media screen and (max-height: 578px) {
+  padding: 15px 0px;
+}
+
+@media only screen and (max-height: 410px) {
+  background-color: #fafafa;
+  background-image: url(../img/fleur2.svg);
+  background-size: 20%;
+  background-attachment: fixed;
+ }
+}
             </code>
           </pre>
            `
