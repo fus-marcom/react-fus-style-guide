@@ -13,9 +13,9 @@ class Section extends Component {
 
   render() {
     return (
-      <div id={this.props.header.toLowerCase()} className="section scrollspy">
-      <h2 className="header">{this.props.header}</h2>
-      <div dangerouslySetInnerHTML={{__html: this.props.content }} />
+      <div className="section scrollspy" id={this.props.id}>
+        <h2 className="header">{this.props.header}</h2>
+        <div dangerouslySetInnerHTML={{__html: this.props.content }} />
         {this.renderCode()}
       </div>
     );

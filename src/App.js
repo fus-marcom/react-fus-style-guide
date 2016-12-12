@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Section from './Section';
+import Header from './Header';
+import Footer from './Footer';
 import './App.css';
 
 // let sections = [
@@ -48,6 +50,7 @@ class App extends Component {
         title: {
           rendered: "Intro"
         },
+        id: "intro",
         content:  {
 
           rendered:
@@ -66,6 +69,7 @@ class App extends Component {
         title: {
           rendered: "Getting Started"
         },
+        id: "getting-started",
         content:  {
 
           rendered:
@@ -109,6 +113,7 @@ class App extends Component {
         title: {
           rendered: "Colors"
         },
+        id: "colors",
         content:  {
 
           rendered:
@@ -143,6 +148,7 @@ class App extends Component {
         title: {
           rendered: "Typography"
         },
+        id: "typography",
         content:  {
 
           rendered:
@@ -158,6 +164,7 @@ class App extends Component {
         title: {
           rendered: "Icons"
         },
+        id: "icons",
         content:  {
 
           rendered:
@@ -201,6 +208,7 @@ class App extends Component {
         title: {
           rendered: "Logos"
         },
+        id: "logos",
         content:  {
 
           rendered:
@@ -227,6 +235,7 @@ class App extends Component {
         title: {
           rendered: "Header"
         },
+        id: "header",
         content:  {
 
           rendered:
@@ -320,6 +329,7 @@ class App extends Component {
         title: {
           rendered: "Footer"
         },
+        id: "footer",
         content:  {
 
           rendered:
@@ -395,6 +405,7 @@ class App extends Component {
         title: {
           rendered: "SideNav"
         },
+        id: "sidenav",
         content:  {
 
           rendered:
@@ -485,6 +496,7 @@ class App extends Component {
         title: {
           rendered: "Hero Section"
         },
+        id: "hero-section",
         content:  {
 
           rendered:
@@ -687,6 +699,7 @@ class App extends Component {
         title: {
           rendered: "Example Sites"
         },
+        id: "example-sites",
         content:  {
 
           rendered:
@@ -790,14 +803,23 @@ class App extends Component {
 
 
   render() {
+    // Pass this.state.sections as props to Header and then on to SideNav to create links
+    //<Header sections={this.state.sections} />
     return (
-      <div className="row">
-        <div className="col s12 m9 l10">
-          {this.state.sections.map(function(section, i){
-            return <Section header={section.title.rendered} content={section.content.rendered} key={i} code={section.code}/>;
-          })}
-        </div>
+      <div>
+        <Header sections={this.state.sections} />
+        <main>
+          <div className="container">
+            <div className="row">
+                {this.state.sections.map(function(section, i){
+                  return <Section id={section.id} header={section.title.rendered} content={section.content.rendered} key={i} code={section.code}/>;
+                })}
+            </div>
+          </div>
+        </main>
+        <Footer />
       </div>
+
     );
   }
 }
