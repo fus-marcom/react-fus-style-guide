@@ -683,6 +683,91 @@ class App extends Component {
          },
         code: ``
       },
+      {
+        title: {
+          rendered: "Example Sites"
+        },
+        content:  {
+
+          rendered:
+          `
+          <div class="row">
+            <div class="col s12 m6">
+              <h5>Style Guide</h5>
+              <p class="flow-text">
+                This site was made using ReactJS.
+              </p>
+              <ul>
+                <li class=""><strong style="font-weight: 600;">Features:</strong></li>
+                <li class="">Fixed, Open on Wide Screen SideNav</li>
+                <li class="">Slim Footer</li>
+                <li class="">ScrollSpy</li>
+              </ul>
+              <ul>
+                <li class="flow-text"><a href="#" target="_blank" title="FUS Style Guide GitHub Repo">GitHub Repo</a></li>
+              </ul>
+
+            </div>
+            <div class="col s12 m6">
+              <h5>Franciscan Square</h5>
+              <p class="flow-text">
+                A multipage static HTML site for the Franciscan Square development.
+                <ul>
+                  <li class=""><strong style="font-weight: 600;">Features:</strong></li>
+                  <li class="">Mobile Only SideNav</li>
+                  <li class="">Sticky Subheader</li>
+                  <li class="">Custom Map</li>
+                  <li class="">Tall Footer</li>
+                </ul>
+                <ul>
+                  <li class="flow-text"><a href="https://franciscansquare.com" target="_blank" title="Franciscan Square">Site Link</a></li>
+                  <li class="flow-text"><a href="https://github.com/JesseRWeigel/franciscan-square" target="_blank" title="Franciscan Square GitHub Repo">GitHub Repo</a></li>
+                </ul>
+              </p>
+            </div>
+            <div class="col s12 m6">
+              <h5>MA Theology</h5>
+              <p class="flow-text">
+                One page static HTML site for prospective MA Theology students.
+                <ul>
+                  <li class=""><strong style="font-weight: 600;">Features:</strong></li>
+                  <li class="">Transparent Header</li>
+                  <li class="">Appear on Scroll-up Sticky Header</li>
+                  <li class="">Hero Video</li>
+                  <li class="">Hero Image (mobile)</li>
+                  <li class="">Bottom Sheet Modal</li>
+                </ul>
+                <ul>
+                  <li class="flow-text"><a href="https://franciscan.university/ma-theology" target="_blank" title="MA Theology Site">Site Link</a></li>
+                  <li class="flow-text"><a href="https://github.com/JesseRWeigel/ma-theology" target="_blank" title="MA Theology GitHub Repo">GitHub Repo</a></li>
+                </ul>
+              </p>
+            </div>
+            <div class="col s12 m6">
+              <h5>franciscan.university</h5>
+              <p class="flow-text">
+                One page static HTML site for prospective undergrad students.
+                <ul>
+                  <li class=""><strong style="font-weight: 600;">Features:</strong></li>
+                  <li class="">Transparent Header</li>
+                  <li class="">Appear on Scroll-up Sticky Header</li>
+                  <li class="">Hero Video</li>
+                  <li class="">Hero Image (mobile)</li>
+                  <li class="">Full Screen Image Carousel</li>
+                  <li class="">Prominent Alternate Colors</li>
+                  <li class="">Slim Footer</li>
+                </ul>
+                <ul>
+                  <li class="flow-text"><a href="https://franciscan.university" target="_blank" title="franciscan.university">Site Link</a></li>
+                  <li class="flow-text"><a href="https://github.com/JesseRWeigel/franciscan.university" target="_blank" title="franciscan.university GitHub Repo">GitHub Repo</a></li>
+                </ul>
+              </p>
+            </div>
+          </div>
+           `
+         },
+        code: ``
+      },
     ]};
 	}
 
