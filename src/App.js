@@ -237,7 +237,7 @@ class App extends Component {
           </p>
           <p class="promo-caption">Header Color</p>
           <p class="flow-text">
-            The prefered header color is fus-green. It can be accompanied by a maximum 5px tall fus-gold border on the bottom. If a full screen video hero section is in use, the header can be transparent or have semi-transparent black background, <code>rgba(0, 0, 0, 0.37)</code>, for readablility. The green header background can also be slightly transparent, <code>rgba(33,65,42,.68)</code>.
+            The prefered header color is fus-green. It can be accompanied by a maximum 5px tall fus-gold border on the bottom. If a full screen video hero section is in use, the header can be transparent or have semi-transparent black background, <code>rgba(0, 0, 0, 0.37)</code>, for readability. The green header background can also be slightly transparent, <code>rgba(33,65,42,.68)</code>.
           </p>
           <p class="promo-caption">Header Position without Side-Nav</p>
           <p class="flow-text">
@@ -525,7 +525,7 @@ class App extends Component {
             Ideally the video should be less than 60 seconds and make sense without sound. Users should be given the option to stop the video. Depending on the screen size and dimensions, certain parts of the video may not be visible. Any important action in the video should take place in the center to insure visibility.
           </p>
           <p class="flow-text">
-            Included below is the HTML and SCSS for the hero video section on the <a href="https://franciscan.university/ma-theology/" target="_blank" title="MA Theology">MA Theology microsite</a>.
+            Included below is the HTML and SCSS for the hero video section on the <a href="https://franciscan.university/ma-theology/" target="_blank" title="MA Theology">MA Theology microsite</a>. All of the files for this site are available at the <a href="https://github.com/JesseRWeigel/ma-theology" target="_blank" title="MA Theology GitHub Repo">MA Theology GitHub Repo</a>.
           </p>
           <pre class="language-html">
             <code class="language-html">
@@ -562,71 +562,73 @@ class App extends Component {
           <pre class="language-scss">
             <code class="language-scss">
 #home {
- min-height: 100vh;
+ min-height: 100vh; //Set height of hero section
  padding-top: 0;
  background-color: rgba(0, 0, 0, 0.4);
  padding: 0px;
 
-.btn-large {
-  font-size: 20px;
-  text-shadow: none;
-  min-width: 270px;
-}
+  .btn-large {
+    font-size: 20px;
+    text-shadow: none;
+    min-width: 270px;
+  }
 
-@media screen and (max-height: 578px) {
-  padding-top: 76px;
+  @media screen and (max-height: 578px) {
+    padding-top: 76px; // Prevents text overlap with logo on mobile.
 
-  .container p.flow-text {
+    .container p.flow-text {
+      display: none; // Remove hero text on mobile.
+    }
+  }
+
+  .parallax {
+    z-index: 1;
+    overflow: hidden;
+    left: -250px;
+    min-height: 100vh;
+  }
+
+  // Darkens video to increase readability.
+  .vid-shade {
+    background-color: rgba(0, 0, 0, 0.31);
+    left: 0;
+  }
+
+  .valign.container {
+    z-index: 2;
+  }
+
+  .flow-text {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 800px) {
+    background: none;
+  }
+
+  #replay, #pause {
     display: none;
+
+    @media screen and (min-width: 800px) {
+      display: block;
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      cursor: pointer;
+      opacity: .5;
+      font-size: 48px;
+    }
+  }
+
+  #replay.scroll, #pause.scroll {
+    @media screen and (min-width: 800px) {
+      position: absolute;
+    }
   }
 }
 
-.parallax {
-  z-index: 1;
-  overflow: hidden;
-  left: -250px;
-  min-height: 100vh;
-}
-
-.vid-shade {
-  background-color: rgba(0, 0, 0, 0.31);
-  left: 0;
-}
-
-.valign.container {
-  z-index: 2;
-}
-
-.flow-text {
-  font-size: 120%;
-  line-height: 1.5;
-}
-
-@media screen and (min-width: 800px) {
-  background: none;
-}
-
-#replay, #pause {
-  display: none;
-
-  @media screen and (min-width: 800px) {
-    display: block;
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-    cursor: pointer;
-    opacity: .5;
-    font-size: 48px;
-  }
-}
-
-#replay.scroll, #pause.scroll {
-  @media screen and (min-width: 800px) {
-    position: absolute;
-  }
-}
-}
-
+// Display a background image instead of a video on small screens
 #home:before {
   content: "";
   position: absolute;
@@ -635,6 +637,7 @@ class App extends Component {
   z-index: -1;
 
   display: block;
+  background-image: url('../img/holy-door-500w-min.jpg');
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
@@ -673,21 +676,6 @@ class App extends Component {
   &:hover {
     opacity: 0.8;
   }
-}
-
-#quote-banner {
-  padding: 50px 0px;
-
-@media screen and (max-height: 578px) {
-  padding: 15px 0px;
-}
-
-@media only screen and (max-height: 410px) {
-  background-color: #fafafa;
-  background-image: url(../img/fleur2.svg);
-  background-size: 20%;
-  background-attachment: fixed;
- }
 }
             </code>
           </pre>
