@@ -92,6 +92,10 @@ pre[class*="language-"]:before {
   border-top: none;
   border-left: none; }
 
+.social a svg {
+  fill: rgba(0, 0, 0, 0.87);
+  width: 48px; }
+
 footer.page-footer {
   background-color: #21412a;
   margin-top: 0px;

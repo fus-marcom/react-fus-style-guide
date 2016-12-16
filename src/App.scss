@@ -124,6 +124,17 @@ pre[class*="language-"]:before {
   border-left: none;
 }
 
+.social {
+  a {
+    svg {
+      // SVG Icon Color
+      fill: rgba(0, 0, 0, 0.87);
+      // SVG Icon Size
+      width: 48px;
+    }
+  }
+}
+
 footer.page-footer {
   background-color: $fus-green;
   margin-top: 0px;
